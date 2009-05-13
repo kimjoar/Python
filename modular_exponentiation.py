@@ -1,4 +1,6 @@
 # Solves a^b mod n using the method of repeated squaring
+# Because bin(b) returns "0b..." we must remove 2 from the length to get the 
+# range, and jump past the two first bits when checking.
 def modular_exponentiation(a,b,n):
   d, b = 1, bin(b)
 
